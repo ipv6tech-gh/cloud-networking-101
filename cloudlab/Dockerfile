@@ -1,4 +1,4 @@
-FROM debian:bookworm
+FROM mcr.microsoft.com/devcontainers/base:bookworm
 
 LABEL maintainer="Scott Taylor <scott@ipv6tech.net>"
 
