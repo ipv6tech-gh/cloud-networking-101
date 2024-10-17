@@ -50,12 +50,12 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     && sudo apt-get install google-cloud-sdk -y
 
 # Install OCI CLI
-RUN curl -L -O https://github.com/oracle/oci-cli/releases/download/v3.49.2/oci-cli-3.49.2.zip \
-    && unzip oci-cli-3.49.2.zip \
-    && cd oci-cli \
-    && bash -c "./install.sh --accept-all-defaults" \
-    && cd .. \
-    && rm -rf oci-cli-3.49.2.zip oci-cli
+#RUN curl -L -O https://github.com/oracle/oci-cli/releases/download/v3.49.2/oci-cli-3.49.2.zip \
+#    && unzip oci-cli-3.49.2.zip \
+#    && cd oci-cli \
+#    && bash -c "./install.sh --accept-all-defaults" \
+#    && cd .. \
+#    && rm -rf oci-cli-3.49.2.zip oci-cli
 
 # Clean up
 RUN apt-get clean -y \
@@ -69,7 +69,8 @@ RUN apt-get clean -y \
 USER vscode
 
 # Install OCI CLI
-RUN python3 -m venv .venv \
+RUN cd \
+    && python3 -m venv .venv \
     && source .venv/bin/activate \
     pip install oci-cli
 
