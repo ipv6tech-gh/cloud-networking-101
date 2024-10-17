@@ -31,7 +31,7 @@ RUN wget -O- https://apt.releases.hashicorp.com/gpg | \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
-COPY ./oci-install.sh /home/vscode/oci-install.sh
+COPY ./entrypoint.sh /home/vscode/oci-install.sh
 
 RUN chmod +x /home/vscode/oci-install.sh
 
