@@ -49,8 +49,7 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     && sudo apt-get install google-cloud-sdk -y
 
 # Install OCI CLI
-RUN cd /home/vscode \
-    curl -L -O https://github.com/oracle/oci-cli/releases/download/v3.49.2/oci-cli-3.49.2.zip \
+RUN curl -L -O https://github.com/oracle/oci-cli/releases/download/v3.49.2/oci-cli-3.49.2.zip \
     && unzip oci-cli-3.49.2.zip \
     && cd oci-cli \
     && bash -c "./install.sh --accept-all-defaults" \
