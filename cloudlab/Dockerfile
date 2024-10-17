@@ -29,7 +29,7 @@ RUN wget -O- https://apt.releases.hashicorp.com/gpg | \
     && sudo apt update -y \
     && sudo apt-get install terraform -y
 
-COPY oci-install.sh /home/vscode/oci-install.sh
+COPY ./oci-install.sh /home/vscode/oci-install.sh
 RUN chmod +x /home/vscode/oci-install.sh \
     && /home/vscode/oci-install.sh
 
