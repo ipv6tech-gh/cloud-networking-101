@@ -18,6 +18,7 @@ RUN apt-get update -y \
     apt-transport-https \ 
     ca-certificates \
     wget \
+    python3.11-venv \
     pip \
     sudo
 
@@ -65,6 +66,11 @@ RUN apt-get clean -y \
 #RUN chmod +x /home/vscode/entrypoint.sh \
 #    && chown -R vscode:vscode /home/vscode
 
-#USER vscode
+USER vscode
+
+# Install OCI CLI
+RUN python3 -m venv .venv \
+    && source .venv/bin/activate \
+    pip install oci-cli
 
 #ENTRYPOINT [ "/home/vscode/entrypoint.sh" ]
