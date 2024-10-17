@@ -27,11 +27,11 @@ RUN wget -O- https://apt.releases.hashicorp.com/gpg | \
     https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
     sudo tee /etc/apt/sources.list.d/hashicorp.list \
     && sudo apt update -y \
-    && sudo apt-get install terraform -y
-
-COPY ./oci-install.sh /home/vscode/oci-install.sh
-RUN chmod +x /home/vscode/oci-install.sh \
-    && /home/vscode/oci-install.sh
-
-RUN apt-get clean -y \
+    && sudo apt-get install terraform -y \
+    && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
+
+USER vscode
+COPY ./oci-install.sh /home/vscode/oci-install.sh
+RUN chmod +x /home/vscode/oci-install.sh
+ENTRYPOINT [ "/home/vscode/oci-install.sh" ]
