@@ -76,13 +76,3 @@ This spins up a new codespace based on this repo and has the most of the package
 
 > [!NOTE]
 > This lab will have you make modifications to the code in the repository in order to stand up your cloud environment(s). If you wish to save those modification you can commit those modifications and codespaces will fork the original repository under your account and save your modifications as a new commit.
-
-## Generate SSH Key for our lab instances (VMs)
-
-Now that we have our Codespace linux container we can create an ssh key to use for the virtual machines/instances we will build in the cloud.
-
-To generate an ssh key run the following and leave the passphrase empty.
-
-```bash
-mkdir -p ~/.ssh && cd ~/.ssh && ssh-keygen -f one-ring
-```

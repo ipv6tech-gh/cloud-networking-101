@@ -3,23 +3,37 @@ marp: true
 theme: uncover
 class:
     - lead
-    - 
+    - invert
+paginate: true
+
+---
+<style>
+section {
+/* background: #215732 ; */
+  background: #16537e ;
+}
+</style>
+
+<!-- colorPreset: sunset -->
+
+
+# Cloud Networking 101
+
 ---
 
-# Title
+# Common Language
 
-## Common Lanaguge
-
-### Some common language across the cloud providers includes
+## Some common language across the cloud providers includes
 
 - Global, Regional, Zonal resources
 - Datacenter - VPC, VNET, VCN
 
 ---
-
-title: Slide two
+Slide two
 
 Some stuff goes here.
+
+![width:800px](./images/addressing%20plan.png)
 
 ---
 
@@ -35,6 +49,8 @@ More
   More stuff here
 ```
 
+![width:800px](./images/CSP%20Range.png)
+
 ---
 
 ## How and when to use I2CC
@@ -45,7 +61,13 @@ More
 - :tada: Better Supportability
 - :moneybag: Reduce Cost
 
-> [!IMPORTANT]
-> Essential information required for user success.
->[!NOTE]
->Highlights information that users should take into account, even when skimming.
+```code
+TIP: Essential information required for user success.
+```
+
+**TIP**:exclamation: something goes here
+
+```code
+NOTE
+Highlights information that users should take into account, even when skimming.
+```

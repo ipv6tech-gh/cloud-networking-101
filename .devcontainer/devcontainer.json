@@ -37,8 +37,10 @@
         // markdown
         "yzhang.markdown-all-in-one",
         "DavidAnson.vscode-markdownlint",
-        // Material Icon Theme
+        // Theme Support
         "pkief.material-icon-theme",
+        "github.github-vscode-theme",
+        "danielgjackson.auto-dark-mode-windows",
         // various extensions
         "mutantdino.resourcemonitor",
         "oderwat.indent-rainbow"
