@@ -33,7 +33,8 @@ RUN wget -O- https://apt.releases.hashicorp.com/gpg | \
 
 COPY ./entrypoint.sh /home/vscode/entrypoint.sh
 
-RUN chmod +x /home/vscode/entrypoint.sh
+RUN chmod +x /home/vscode/entrypoint.sh \
+    && chown -R vscode:vscode /home/vscode
 
 USER vscode
 
