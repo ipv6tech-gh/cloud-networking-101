@@ -12,7 +12,7 @@
         "gamunu.opentofu",
         // AWS, Azure, Google Cloud, Oracle Cloud tools
         "amazonwebservices.aws-toolkit-vscode",
-        "ms-vscode.vscode-node-azure-pack",
+        "ms-vscode.azurecli",
         "googlecloudtools.cloudcode",
         "oracle.oci-vscode-toolkit",
         // diagram support
