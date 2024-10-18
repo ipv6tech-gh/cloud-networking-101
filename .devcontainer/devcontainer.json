@@ -1,17 +1,15 @@
 {
   "name": "CloudLab",
   "image": "ghcr.io/ipv6tech/cloud-networking-101/cloudlab:latest",
-//  "build": {
-//    "dockerfile": "./Dockerfile"
-//  },
   "postCreateCommand": {
     "command": "mkdir -p ~/.ssh && cd ~/.ssh && ssh-keygen -f one-ring -N ''"
   },
   "customizations": {
     "vscode": {
       "extensions": [
-        // terraform tools
+        // Terraform + OpenTofu tools
         "hashicorp.terraform",
+        "gamunu.opentofu",
         // AWS, Azure, Google Cloud, Oracle Cloud tools
         "amazonwebservices.aws-toolkit-vscode",
         "ms-azuretools.vscode-docker",
@@ -19,7 +17,6 @@
         "oracle.oci-vscode-toolkit",
         // diagram support
         "hediet.vscode-drawio",
-        "pomdtr.excalidraw-editor",
         // git tools
         "mhutchie.git-graph",
         "tomblind.scm-buttons-vscode",
