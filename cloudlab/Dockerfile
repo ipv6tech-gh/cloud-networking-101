@@ -50,6 +50,10 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
 
 USER vscode
 
+# Create ssh key for vscode user
+RUN mkdir -p ~/.ssh \
+    && ssh-keygen -N "" -f ~/.ssh/one-ring
+
 # Install OCI CLI
 RUN sudo apt install pipx -y \
     && pipx install oci-cli

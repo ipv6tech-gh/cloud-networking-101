@@ -1,9 +1,9 @@
 {
   "name": "CloudLab",
   "image": "ghcr.io/ipv6tech/cloud-networking-101/cloudlab:main",
-  "postCreateCommand": {
-    "command": "mkdir -p ~/.ssh && cd ~/.ssh && ssh-keygen -f one-ring -N ''"
-  },
+//  "postCreateCommand": {
+//    "command": "mkdir -p ~/.ssh && cd ~/.ssh && ssh-keygen -f one-ring -N ''"
+//  },
   "customizations": {
     "vscode": {
       "extensions": [
