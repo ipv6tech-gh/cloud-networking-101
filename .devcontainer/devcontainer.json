@@ -14,16 +14,10 @@
         "mhutchie.git-graph",
         "tomblind.scm-buttons-vscode",
         "streetsidesoftware.code-spell-checker",
-        "ban.spellright",
         "esbenp.prettier-vscode",
-        "tomoki1207.pdf",
         "redhat.vscode-yaml",
         "yzhang.markdown-all-in-one",
         "DavidAnson.vscode-markdownlint",
-        "pkief.material-icon-theme",
-        "pkief.material-product-icons",
-        "github.github-vscode-theme",
-        "danielgjackson.auto-dark-mode-windows",
         "mutantdino.resourcemonitor",
         "oderwat.indent-rainbow"
       ]
