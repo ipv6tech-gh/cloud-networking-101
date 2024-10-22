@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/devcontainers/base:bookworm
 
 LABEL org.opencontainers.image.authors="Scott Taylor <scott@ipv6tech.net>"
 
-LABEL org.opencontainers.image.source="https://github.com/ipv6tech/cloud-networking-101"
+#LABEL org.opencontainers.image.source="https://github.com/ipv6tech/cloud-networking-101"
 
 # Install required packages
 RUN apt-get update -y \
