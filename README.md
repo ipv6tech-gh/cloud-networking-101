@@ -57,7 +57,7 @@ Google Subnet is a regional resource unlike the other CSP
 
 ## Hands-on Lab
 
-Documentation on how to bootstrap the lab environment and complete the hands-on portion can be found here: [Multicloud Lab Deployment](cloudlab/lab-env.md).
+Documentation on how to bootstrap the lab environment and complete the hands-on portion can be found here: [Multicloud Lab Deployment](lab/lab-env.md).
 
 ---
 

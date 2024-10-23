@@ -48,6 +48,9 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     && sudo apt-get update -y \
     && sudo apt-get install google-cloud-sdk -y
 
+# Change default shell to zsh
+RUN chsh -s /bin/zsh vscode
+
 USER vscode
 
 # Create ssh key for vscode user
