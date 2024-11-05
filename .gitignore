@@ -41,6 +41,7 @@ Temporary Items
 
 # Environments
 .env
+.envrc
 .venv
 env/
 venv/
@@ -85,3 +86,6 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# Ignore credientials file
+credentials.json

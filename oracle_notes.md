@@ -4,9 +4,9 @@
 
 ![oci](oracle/oci.png)
 
-**Region** - a location that oracle has a presense
-    - several locations with many availability domains, many with one availablity domain
-**Availablity Domain** - one or more data centers, in regions that have multiple Availability domains, these can operate independently from each other and keep going even if one availability domain goes offline.
+**Region** - a location that oracle has a presence
+    - several locations with many availability domains, many with one availability domain
+**Availability Domain** - one or more data centers, in regions that have multiple Availability domains, these can operate independently from each other and keep going even if one availability domain goes offline.
 **Fault Domain** - Each fault domain has a minimum of three racks that have compute, load balancing and network type resources.
 
 ### Virtual Cloud Network (VCN)
@@ -35,9 +35,9 @@ A CIDR block is a VCN IP address range that is the superset address range that c
 
 **Public IP Addresses** can be assigned to a resource and reachable over the Internet.
 
-- Two types, **ephermeral** and **reserved** IP addresses
+- Two types, **ephemeral** and **reserved** IP addresses
 - instances in a public subnet by default get a public IP address assigned.
-- by default these automatically assigned IP's will be ephermeral and you can not change the type to a reserved IP.
+- by default these automatically assigned IP's will be ephemeral and you can not change the type to a reserved IP.
 - reserved IP addresses can be moved from vnic to vnic which means they can move between instances.
 
 #### Subnets
@@ -46,17 +46,17 @@ A CIDR block is a VCN IP address range that is the superset address range that c
 
 - two different constructs, private and public
 - typically RFC-1918 but don't have to be
-- subnets can be **availablity domain specific** or a **regional specific**
+- subnets can be **availability domain specific** or a **regional specific**
 
-**Availablity Domain Subnets** resides inside a single availablity domain in a VCN.
+**Availability Domain Subnets** resides inside a single availability domain in a VCN.
 
-**Regional Subnets** stretch across all availablity domains within a region.
+**Regional Subnets** stretch across all availability domains within a region.
 
 > [!Note]
 > Oracle recommends use of **regional subnets** because they're more flexible. They make it easier to efficiently divide your VCN into subnets while also designing for availability domain failure.
 
 > [!Caution]
-> Resources created in a regional subnet still reside inside a specified availablity domain. If that AD goes down, the resource will go down but resources in other AD's using the regional subnet will still be reachable.
+> Resources created in a regional subnet still reside inside a specified availability domain. If that AD goes down, the resource will go down but resources in other AD's using the regional subnet will still be reachable.
 
 **Public** Would have
 **Private** Would

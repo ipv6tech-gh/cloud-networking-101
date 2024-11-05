@@ -1,8 +1,8 @@
 # Networking in the Cloud
 
-If you are here I assume you either enjoy computer networking or are looking to develop a healthy understanding of the importance of networking in the cloud. Networking is a core component of the cloud. The cloud environments are built on SDN and ubiquitious connectivity. Building well-defined infrastructure is cruicial to reliable and scalable services.
+If you are here I assume you either enjoy computer networking or are looking to develop a healthy understanding of the importance of networking in the cloud. Networking is a core component of the cloud. The cloud environments are built on SDN and ubiquitous connectivity. Building well-defined infrastructure is crucial to reliable and scalable services.
 
-Unfortuntantly we cannot cover all networking services, we could spend a solid week just on networking in AWS alone.
+Unfortunately we cannot cover all networking services, we could spend a solid week just on networking in AWS alone.
 
 What we will *attempt* to cover!
 
@@ -23,7 +23,7 @@ Most CSP's use the term `well-architected` to describe framework for their speci
 
 Importance of IP Planning
 
-Redundancy v Resiliancy
+Redundancy v Resiliency
 
 ## AWS Networking
 
