@@ -34,7 +34,7 @@ For each CSP that you wish to work with we have some prep work we can do while w
 We will need to create credentials for the CLI tools and terraform to create an environment.
 
 > [!NOTE]
-> In order to try to keep our environments secure we will use codespace secrets for private 
+> In order to try to keep our environments secure we will use codespaces secrets for private 
 
 > [!WARNING]
 > This repo uses a `.gitignore` file to try to keep Avoid committing your terraform state and terraform  

@@ -6,35 +6,42 @@ variable "env"{
 variable "tenancy_ocid" {
   description = "The OCID of your tenancy"
   type        = string
-  default     = "ocid1.tenancy.oc1..aaaaaaaalx5qbe2m774eu7svzpvlaipyhu762amja4dmzd26bkiadmcu2coq"
+  default     = "ocid1.tenancy.oc1..aaaaaaa"
 }
 variable "user_ocid" {
   description = "The OCID of your user"
   type        = string
-  default     = "ocid1.user.oc1..aaaaaaaasmyeylr23udrl3vikcbi27jfnyfyrevobsp26wjoxxzwf5ngx2wq"
+  default     = "ocid1.user.oc1..aaaaaaa"
 }
 variable "region" {
   description = "The region where the resources will be created"
   type        = string
   default     = "us-ashburn-1"
 }
-
-/* variable "compartment_ocid" {
+variable "compartment_ocid" {
   description = "The OCID of the compartment where the resources will be created"
   type = string
-  default = "ocid1.compartment.oc1..aaaaaaaaoxktrtjlhoxuxwcwim7qvpnmcajbrtz5at3jd5h5jwjkhbznhh2a"
-}*/
+  default = "ocid1.compartment.oc1..aaaaaaa"
+}
+
+variable "api_private_key_file" {
+  description = "The path to the private key"
+  type        = string
+  default     = "/Users/staylor/.oci/oci_api_key.pem"
+}
 
 # SSH key info
-variable "fingerprint" {
+variable "api_public_key_fingerprint" {
   description = "The fingerprint of the public key"
   type        = string
-  default     = ""
+  default     = "be:ef:be:ef:be:ef:be:ef:be:ef:be:ef:be:ef:be:ef"
 }
+
 variable "public_key" {
   type    = string
   default = "~/.ssh/one-ring.pub"
 }
+
 variable "private_key" {
   type    = string
   default = "~/.ssh/one-ring"
@@ -46,15 +53,28 @@ variable "vm_shape" {
   type        = string
   default     = "VM.Standard.E4.Flex"
 }
+# VM OS
+variable "operating_system" {
+  description = "The operating system of the VM"
+  type        = string
+  default     = "Oracle Linux"
+}
+
+#VM OS version
+variable "operating_system_version" {
+  description = "The version of the operating system"
+  type        = string
+  default     = "9.4"
+}
 
 # CIDR blocks
 variable "vcn_cidr" {
-  description = "The CIDR block for the VCN"
+  description = "The CIDR block for the i2lab VCN"
   type        = string
   default     = "10.216.0.0/16"
 }
 variable "subnet_cidr" {
-  description = "The CIDR block for the subnet"
+  description = "The CIDR block for the public subnet"
   type        = string
   default     = "10.216.1.0/24"
 }

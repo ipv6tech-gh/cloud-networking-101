@@ -1,5 +1,5 @@
 resource "oci_core_instance" "i2lab" {
-  compartment_id      = oci_identity_compartment.i2lab.id
+  compartment_id      = var.compartment_ocid
   availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0].name
   shape               = var.vm_shape
   display_name        = "i2lab-oci"
@@ -20,14 +20,15 @@ resource "oci_core_instance" "i2lab" {
 
   source_details {
     source_type = "image"
-    source_id   = data.oci_core_images.ubuntu_image.id
+    source_id   = data.oci_core_images.OSImage.images[0].id
   }
-  provisioner "local-exec" {
+
+  /*provisioner "local-exec" {
     command = templatefile("files/linux-ssh-config.tpl", {
       host         = "${var.env}-oracle"
       hostname     = self.public_ip
-      user         = "admin"
+      user         = "opc"
       identityfile = var.private_key
     })
-  }
+  }*/
 }

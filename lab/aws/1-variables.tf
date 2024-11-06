@@ -13,7 +13,7 @@ variable "env" {
 variable "account_id" {
   description = "AWS Account ID"
   type        = string
-  default     = "173146604326" // change to match your AWS account ID
+  default     = "1234567890" // change to match your AWS account ID
 }
 
 # set local host OS to `linux` or `windows`- used for ssh-config generation and other functions
@@ -96,18 +96,18 @@ variable "i2cr_vlan_id" {
 variable "primary_bgp_key" {
   description = "BGP auth key for primary virtual interface configured in I2CR"
   type        = string
-  //  default     = "vdsnNZO6DhSCp5Alfwa02QimMGxDid0E" // change to match the BGP key used in I2CR
+  // default     = "yourkey" // change to match the key configured in I2CR
 }
 
 variable "aws_primary_address" {
   description = "IP addressing on the AWS side of the connection"
   type        = string
-  default     = "10.192.0.1/30" // change to match address configured on I2CR for AWS
+  default     = "10.192.0.2/30" // change to match address configured on I2CR for AWS
 }
 variable "i2cr_primary_address" {
   description = "IP addressing on the I2CR side of connection"
   type        = string
-  default     = "10.192.0.2/30" // change to match address configured on I2CR
+  default     = "10.192.0.1/30" // change to match address configured on I2CR
 }
 
 # Variables for budget alerts

@@ -35,7 +35,7 @@ variable "private_key" {
 variable "admin_password" {
   description = "The password for the admin user"
   type        = string
-  default     = "i2lab-Passw0rd9234!" // change me
+//  default     = "i2lab-Passw0rd9234!" // change me
 }
 
 #set vnet cidr block
@@ -70,5 +70,4 @@ variable "email" {
   description = "Please enter the email address to which budget notifications should be addressed."
   type        = string
   //  default     = "alerts@yourdomain.com"
-  default = "cloud@ipv6tech.net"
 }

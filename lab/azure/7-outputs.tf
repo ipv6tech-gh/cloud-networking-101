@@ -1,4 +1,4 @@
-/* output "id" {
-  value = data.azurerm_ssh_public_key.i2lab.id
+# public ip
+output "public_ip" {
+  value = azurerm_public_ip.public_ip.ip_address
 }
-*/
