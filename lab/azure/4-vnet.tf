@@ -15,11 +15,19 @@ resource "azurerm_virtual_network" "i2lab_vnet" {
 }
 
 # Create a public subnet
-resource "azurerm_subnet" "public" {
+resource "azurerm_subnet" "i2lab-public" {
   name                 = "i2lab-public"
   resource_group_name  = azurerm_resource_group.i2lab-rg.name
   virtual_network_name = azurerm_virtual_network.i2lab_vnet.name
   address_prefixes     = ["10.200.1.0/24"]
+}
+
+# Create a gw-subnet for vng
+resource "azurerm_subnet" "gw-subnet" {
+  name                 = "GatewaySubnet"
+  resource_group_name  = azurerm_resource_group.i2lab-rg.name
+  virtual_network_name = azurerm_virtual_network.i2lab_vnet.name
+  address_prefixes     = ["10.200.0.240/28"]
 }
 
 # Create a network security group
@@ -55,7 +63,7 @@ resource "azurerm_network_security_group" "i2lab-nsg" {
 
 # Associate the NSG with the subnet
 resource "azurerm_subnet_network_security_group_association" "subnet_nsg_assoc" {
-  subnet_id                 = azurerm_subnet.public.id
+  subnet_id                 = azurerm_subnet.i2lab-public.id
   network_security_group_id = azurerm_network_security_group.i2lab-nsg.id
 }
 
@@ -64,7 +72,7 @@ resource "azurerm_public_ip" "public_ip" {
   name                = "i2lab_public_ip"
   location            = azurerm_resource_group.i2lab-rg.location
   resource_group_name = azurerm_resource_group.i2lab-rg.name
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"
 }
 
 # Create a network interface
@@ -75,7 +83,7 @@ resource "azurerm_network_interface" "i2lab-nic" {
 
   ip_configuration {
     name                          = "internal"
-    subnet_id                     = azurerm_subnet.public.id
+    subnet_id                     = azurerm_subnet.i2lab-public.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.public_ip.id
   }

@@ -70,4 +70,10 @@ Documentation on how to bootstrap the lab environment and complete the hands-on 
 
 Other Resources:
 1. I can recommend Andrew Brown's course over at [ExamPro](Exampro.co). Andrew has many free courses with short video that can help **git** you up to speed quickly.
-2. 
+
+## TODO
+
+- [ ] IPv6 addressing
+- [ ] Lesson breakouts
+- [ ] Better Lab documentation
+- [ ] Lab solution sets

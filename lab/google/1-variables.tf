@@ -4,7 +4,7 @@ variable "env" {
   default = "i2lab"
 }
 variable "project_id" {
-  type = string
+  type    = string
   default = "i2lab-440216"
 }
 variable "region" {
@@ -43,15 +43,15 @@ variable "ssh_user" {
   type    = string
   default = "admin"
 }
-variable "cr_asn"{
+variable "cr_asn" {
   type    = number
   default = "65100"
 }
-variable "i2cc_asn"{
+variable "i2cc_asn" {
   type    = number
   default = "55038"
 }
-variable "cr_peer_ip"{
+variable "cr_peer_ip" {
   type    = string
   default = "10.208.0.1/30"
 }

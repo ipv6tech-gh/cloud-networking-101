@@ -6,12 +6,12 @@ resource "azurerm_virtual_network_gateway" "i2lab-vng" {
 
   type     = "Vpn"
   vpn_type = "RouteBased"
-  sku      = "Basic"
+  sku      = "Standard"
 
   ip_configuration {
     name                          = "i2lab-vng-ipconfig"
     public_ip_address_id          = azurerm_public_ip.public_ip.id
     private_ip_address_allocation = "Dynamic"
-    subnet_id                     = azurerm_subnet.public.id
+    subnet_id                     = azurerm_subnet.gw-subnet.id
   }
 }

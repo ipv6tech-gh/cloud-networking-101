@@ -21,8 +21,8 @@ resource "google_compute_instance" "vm" {
   machine_type = var.machine_type
   network_interface {
     subnetwork = google_compute_subnetwork.public.id
-  access_config {
-    network_tier = "STANDARD"
+    access_config {
+      network_tier = "STANDARD"
     }
   }
   //metadata_startup_script = file("files/startup.sh")
